@@ -1,0 +1,31 @@
+App\Domain\Components\Domain\Component\Component:
+  type: entity
+  inheritanceType: JOINED
+  discriminatorColumn :
+    name : discr
+    type : string
+  discriminatorMap :
+    file : App\Domain\Components\Domain\Component\Components\ComponentFile
+    video : App\Domain\Components\Domain\Component\Components\ComponentImage
+    image : App\Domain\Components\Domain\Component\Components\ComponentVideo
+
+  id:
+     componentId:
+       name: componentId
+       type: string
+  fields:
+     ancho:
+       column: ancho
+       type: string
+     alto:
+       column: alto
+       type: string
+     nombre:
+       column: nombre
+       type: string
+     anuncioId:
+       name: anuncioId
+       type: string
+  embedded:
+     position:
+       class: App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentPosition

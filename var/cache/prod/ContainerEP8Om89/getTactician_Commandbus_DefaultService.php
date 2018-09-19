@@ -16,6 +16,7 @@ include_once $this->targetDirs[3].'\\vendor\\league\\tactician\\src\\Middleware.
 include_once $this->targetDirs[3].'\\vendor\\league\\tactician\\src\\Handler\\CommandHandlerMiddleware.php';
 include_once $this->targetDirs[3].'\\vendor\\league\\tactician\\src\\CommandBus.php';
 
-return $this->services['tactician.commandbus.default'] = new \League\Tactician\CommandBus(array(0 => new \League\Tactician\Handler\CommandHandlerMiddleware(new \League\Tactician\Handler\CommandNameExtractor\ClassNameExtractor(), new \League\Tactician\Container\ContainerLocator(new \Symfony\Component\DependencyInjection\ServiceLocator(array('App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\CreateAnuncioHandler' => function () {
-    return ($this->privates['App\Domain\Anuncios\UseCases\CreateAnuncio\CreateAnuncioHandler'] ?? $this->load('getCreateAnuncioHandlerService.php'));
-})), array('App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\AnuncioCommand' => 'App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\CreateAnuncioHandler')), new \League\Tactician\Handler\MethodNameInflector\HandleInflector())));
+return $this->services['tactician.commandbus.default'] = new \League\Tactician\CommandBus(array(0 => new \League\Tactician\Handler\CommandHandlerMiddleware(new \League\Tactician\Handler\CommandNameExtractor\ClassNameExtractor(), new \League\Tactician\Container\ContainerLocator(new \Symfony\Component\DependencyInjection\ServiceLocator(array(
+    'App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\CreateComponentHandler' => function () {
+    return ($this->privates['App\Domain\Anuncios\UseCases\CreateAnuncio\CreateComponentHandler'] ?? $this->load('getCreateAnuncioHandlerService.php'));
+})), array('App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\ComponentCommand' => 'App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\CreateComponentHandler')), new \League\Tactician\Handler\MethodNameInflector\HandleInflector())));

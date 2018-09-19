@@ -2,4 +2,4 @@
 #    path:
 #        es: /anuncio
 #        en: /about-us
-#    controller: src\controllers\AnuncioController::__construct
+#    controller: src\controllers\ComponentController::__construct

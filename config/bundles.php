@@ -3,7 +3,7 @@ use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Doctrine\Common\Annotations\AnnotationReader;
 
-$paths = array( realpath(__DIR__."/../src/My/Entity") );
+$paths = array(dirname(__DIR__) . "/src");
 $isDevMode = TRUE;
 
 // the connection configuration

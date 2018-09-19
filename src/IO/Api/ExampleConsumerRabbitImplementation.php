@@ -9,7 +9,7 @@
     namespace App\IO\Api;
     
     
-    use App\Domain\Anuncios\Domain\EventSubscriber;
+    use App\Domain\Components\Domain\EventSubscriber;
     use PhpAmqpLib\Connection\AMQPStreamConnection;
 
     class ExampleConsumerRabbitImplementation implements EventSubscriber
@@ -33,8 +33,6 @@
     
         public function handleEvents()
         {
-    
-        
     
         }
     

@@ -3,7 +3,7 @@ parameters:
     # This allows you to run cache:warmup even if your
     # environment variables are not available yet.
     # You should not need to change this value.
-    env(DATABASE_URL): 'DATABASE_URL=mysql://root:@127.0.0.1:3306/example'
+    env(DATABASE_URL): 'DATABASE_URL=mysql://root:@127.0.0.1:3306/components'
 
 doctrine:
     dbal:
@@ -16,31 +16,24 @@ doctrine:
             collate: utf8mb4_unicode_ci
 
         url: '%env(resolve:DATABASE_URL)%'
-        types :
-            TypeAlto : App\Domain\Anuncios\Domain\Component\Components\CustomTypes\TypeAlto
+
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
         mappings:
-            MyBundle:
-                is_bundle: true
-                type: yml
-                # "dir" in this case must be pointed where are stored your doctrine files (can be anywhere inside the project dir)
-                dir: "Domain/Anuncios/Domain/AnuncioDomain"
-                prefix: App\Domain\Anuncios\Domain\AnuncioDomain
             Components:
                 is_bundle: false
                 type: yml
-                dir: "%kernel.project_dir%/src/Domain/Anuncios/Domain/Component/Components"
-                prefix: App\Domain\Anuncios\Domain\Component\Components
+                dir: "%kernel.project_dir%/src/Domain/Components/Domain/Component/Components"
+                prefix: App\Domain\Components\Domain\Component\Components
             Component:
                 is_bundle: false
                 type: yml
-                dir: "%kernel.project_dir%/src/Domain/Anuncios/Domain/Component"
-                prefix: App\Domain\Anuncios\Domain\Component
+                dir: "%kernel.project_dir%/src/Domain/Components/Domain/Component"
+                prefix: App\Domain\Components\Domain\Component
             Embebed:
                 is_bundle: false
                 type: yml
-                dir: "%kernel.project_dir%/src/Domain/Anuncios/Domain/Component/Components/ComponentsVO"
-                prefix: App\Domain\Anuncios\Domain\Component\Components\ComponentsVO
+                dir: "%kernel.project_dir%/src/Domain/Components/Domain/Component/Components/ComponentsVO"
+                prefix: App\Domain\Components\Domain\Component\Components\ComponentsVO

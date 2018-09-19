@@ -9,7 +9,7 @@
 namespace App\IO\UuidGenerator;
 
 
-class UUid extends \Ramsey\Uuid\Uuid  implements \App\Domain\Anuncios\Domain\AnuncioDomain\UUid
+class UUid extends \Ramsey\Uuid\Uuid  implements \App\Domain\Components\Domain\AnuncioDomain\UUid
 {
     
     public static function   generateUuid()

@@ -10,9 +10,43 @@ parameters:
   rabbitmq_password: 'guest'
   rabbitmq_statuslayer_vhost: 'example'
 services:
+    old_sound_rabbit_mq:
+        connections:
+            host:     'localhost'
+            port:     5672
+            user:     'guest'
+            password: 'guest'
+            vhost:    '/'
+            lazy:     false
+            connection_timeout: 3
+            read_write_timeout: 3
 
+            # requires php-amqplib v2.4.1+ and PHP5.4+
+            keepalive: false
+
+            # requires php-amqplib v2.4.1+
+            heartbeat: 0
+
+            #requires php_sockets.dll
+            use_socket: true # default false
+
+        consumers:
+            message_create:
+                connection:       default
+                exchange_options: { name: message_create_ex, type: fanout }
+                queue_options:
+                    name: message_create_qu
+                    arguments:
+                        x-dead-letter-exchange:    ['S', 'message_create_dead_letter_ex']
+                        x-dead-letter-routing-key: ['S', 'message_create_dead_letter_qu']
+                callback:         app.consumer.message_create
+            message_create_dead_letter:
+                connection:       default
+                exchange_options: { name: message_create_dead_letter_ex, type: fanout }
+                queue_options:    { name: message_create_dead_letter_qu }
+                callback:         app.consumer.message_create_dead_letter
 #    app.hello_controller:
-#        class: api\controllers\AnuncioController
+#        class: api\controllers\ComponentController
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
@@ -24,8 +58,8 @@ services:
         tags:
             - { name: 'console.command', command: 'app:example' }
 
-    anuncio.controller:
-        class: App\Controller\AnuncioController
+    Component.controller:
+        class: App\Controller\ComponentController
         public: true
         tags: ['controller.service_arguments']
     sunmedia.controller:
@@ -34,36 +68,28 @@ services:
 
 
 
-    App\Domain\Anuncios\UseCases\CreateAnuncio\CreateAnuncioHandler:
-        class: App\Domain\Anuncios\UseCases\CreateAnuncio\CreateAnuncioHandler
-        arguments: ['@anuncio_creator']
+    App\Domain\Components\UseCases\CreateComponent\CreateComponentHandler:
+        class:  App\Domain\Components\UseCases\CreateComponent\CreateComponentHandler
+        arguments: ['@Component_creator']
         tags:
-        - { name: tactician.handler, command: App\Domain\Anuncios\UseCases\Create\AnuncioCommand , typehints: true}
+        - { name: tactician.handler, command: App\Domain\Components\UseCases\CreateComponent\ComponentCommand , typehints: true}
 
-    anuncio_repository:
-        class : App\Domain\Anuncios\Domain\AnuncioDomain\AnuncioRepository
 
     component_repository:
-        class : App\Domain\Anuncios\Domain\Component\ComponentRepository
-    anuncio_repository_doctrine:
-        class: App\Domain\Anuncios\Persistance\AnuncioPersistance
-        arguments: ['@Doctrine\Common\Persistence\ManagerRegistry',App\Domain\Anuncios\Domain\AnuncioDomain\Anuncio , '@doctrine.orm.entity_manager']
-    anuncio_creator:
-        class: App\Domain\Anuncios\UseCases\CreateAnuncio\AnuncioCreator
-        arguments: ['@anuncio_repository_doctrine' ,'@components_repository_doctrine','@event_domain.publisher']
-    App\Domain\Anuncios\Domain\Component\Components\ComponentsVO\ComponentId:
-        class: App\Domain\Anuncios\Domain\Component\Components\ComponentsVO\ComponentId
-        arguments: ['@rampsey_id']
-    anuncio_id:
-        class: App\Domain\Anuncios\Domain\AnuncioDomain\AnuncioId
-        arguments: ['@rampsey_id']
+        class : App\Domain\Components\Domain\Component\ComponentRepository
     components_repository_doctrine:
-        class: App\Domain\Anuncios\Persistance\ComponentsPersistance
-        arguments: ['@Doctrine\Common\Persistence\ManagerRegistry',App\Domain\Anuncios\Domain\Component\Component , '@doctrine.orm.entity_manager']
+        class: App\Domain\Components\Persistance\ComponentsPersistance
+        arguments: ['@Doctrine\Common\Persistence\ManagerRegistry',App\Domain\Components\Domain\ComponentDomain\Component , '@doctrine.orm.entity_manager']
+    Component_creator:
+        class: App\Domain\Components\UseCases\CreateComponent\ComponentCreator
+        arguments: ['@components_repository_doctrine' ,'@components_repository_doctrine','@event_domain.publisher']
+    App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentId:
+        class: App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentId
+        arguments: ['@rampsey_id']
 
 
     event_domain_exception.listener:
-        class: App\Domain\Anuncios\Exception\ExceptionDomainListener
+        class: App\Domain\Components\Exception\ExceptionDomainListener
         tags :
         - { name: tactician.handler, event: kernel.exception , method: onDomainException}
     event_domain.publisher:

@@ -12,7 +12,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 class ExampleCommand extends Command
 {
-    protected static $defaultName = 'app:example';
+    protected static $defaultName = 'app:exampleCommand';
 
     protected function configure()
     {

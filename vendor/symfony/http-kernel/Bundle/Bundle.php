@@ -37,7 +37,7 @@ abstract class Bundle implements BundleInterface
      */
     public function boot()
     {
-       // Type::addType('TypeAlto', 'App\Domain\Anuncios\Domain\Component\Components\CustomTypes\TypeAlto');
+       // Type::addType('TypeAlto', 'App\Domain\Components\Domain\Component\Components\CustomTypes\TypeAlto');
     
     }
 

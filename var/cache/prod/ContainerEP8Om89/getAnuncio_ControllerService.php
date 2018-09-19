@@ -12,6 +12,6 @@ include_once $this->targetDirs[3].'\\vendor\\symfony\\dependency-injection\\Cont
 include_once $this->targetDirs[3].'\\vendor\\symfony\\http-kernel\\Bundle\\Bundle.php';
 include_once $this->targetDirs[3].'\\vendor\\friendsofsymfony\\rest-bundle\\FOSRestBundle.php';
 include_once $this->targetDirs[3].'\\src\\IO\\Api\\SunmediaController.php';
-include_once $this->targetDirs[3].'\\src\\Controller\\AnuncioController.php';
+include_once $this->targetDirs[3].'\\src\\Controller\\ComponentControllerer.php';
 
 return $this->services['anuncio.controller'] = new \App\Controller\AnuncioController(($this->services['tactician.commandbus.default'] ?? $this->load('getTactician_Commandbus_DefaultService.php')), ($this->services['request_stack'] ?? $this->services['request_stack'] = new \Symfony\Component\HttpFoundation\RequestStack()));

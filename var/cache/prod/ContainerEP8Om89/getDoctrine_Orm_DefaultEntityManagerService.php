@@ -40,17 +40,17 @@ include_once $this->targetDirs[3].'\\vendor\\doctrine\\orm\\lib\\Doctrine\\ORM\\
 
 $a = new \Symfony\Component\Cache\DoctrineProvider(($this->privates['doctrine.system_cache_pool'] ?? $this->load('getDoctrine_SystemCachePoolService.php')));
 
-$b = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array(($this->targetDirs[3].'\\src\\Domain\\Anuncios\\Domain\\AnuncioDomain') => 'App\\Domain\\Anuncios\\Domain\\AnuncioDomain', ($this->targetDirs[3].'\\src\\Domain\\Anuncios\\Domain\\Component\\Components') => 'App\\Domain\\Anuncios\\Domain\\Component\\Components', ($this->targetDirs[3].'\\src\\Domain\\Anuncios\\Domain\\Component') => 'App\\Domain\\Anuncios\\Domain\\Component', ($this->targetDirs[3].'\\src\\Domain\\Anuncios\\Domain\\Component\\Components\\ComponentsVO') => 'App\\Domain\\Anuncios\\Domain\\Component\\Components\\ComponentsVO'));
+$b = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array(($this->targetDirs[3].'\\src\\Domain\\Components\\Domain\\AnuncioDomain') => 'App\\Domain\\Components\\Domain\\AnuncioDomain', ($this->targetDirs[3].'\\src\\Domain\\Components\\Domain\\Component\\Components') => 'App\\Domain\\Components\\Domain\\Component\\Components', ($this->targetDirs[3].'\\src\\Domain\\Components\\Domain\\Component') => 'App\\Domain\\Components\\Domain\\Component', ($this->targetDirs[3].'\\src\\Domain\\Components\\Domain\\Component\\Components\\ComponentsVO') => 'App\\Domain\\Components\\Domain\\Component\\Components\\ComponentsVO'));
 $b->setGlobalBasename('mapping');
 
 $c = new \Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain();
-$c->addDriver($b, 'App\\Domain\\Anuncios\\Domain\\AnuncioDomain');
-$c->addDriver($b, 'App\\Domain\\Anuncios\\Domain\\Component\\Components');
-$c->addDriver($b, 'App\\Domain\\Anuncios\\Domain\\Component');
-$c->addDriver($b, 'App\\Domain\\Anuncios\\Domain\\Component\\Components\\ComponentsVO');
+$c->addDriver($b, 'App\\Domain\\Components\\Domain\\AnuncioDomain');
+$c->addDriver($b, 'App\\Domain\\Components\\Domain\\Component\\Components');
+$c->addDriver($b, 'App\\Domain\\Components\\Domain\\Component');
+$c->addDriver($b, 'App\\Domain\\Components\\Domain\\Component\\Components\\ComponentsVO');
 
 $d = new \Doctrine\ORM\Configuration();
-$d->setEntityNamespaces(array('MyBundle' => 'App\\Domain\\Anuncios\\Domain\\AnuncioDomain', 'Components' => 'App\\Domain\\Anuncios\\Domain\\Component\\Components', 'Component' => 'App\\Domain\\Anuncios\\Domain\\Component', 'Embebed' => 'App\\Domain\\Anuncios\\Domain\\Component\\Components\\ComponentsVO'));
+$d->setEntityNamespaces(array('MyBundle' => 'App\\Domain\\Components\\Domain\\AnuncioDomain', 'Components' => 'App\\Domain\\Components\\Domain\\Component\\Components', 'Component' => 'App\\Domain\\Components\\Domain\\Component', 'Embebed' => 'App\\Domain\\Components\\Domain\\Component\\Components\\ComponentsVO'));
 $d->setMetadataCacheImpl($a);
 $d->setQueryCacheImpl($a);
 $d->setResultCacheImpl(new \Symfony\Component\Cache\DoctrineProvider(($this->privates['doctrine.result_cache_pool'] ?? $this->load('getDoctrine_ResultCachePoolService.php'))));

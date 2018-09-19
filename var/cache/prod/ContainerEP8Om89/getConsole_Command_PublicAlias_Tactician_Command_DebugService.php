@@ -9,4 +9,4 @@ use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 include_once $this->targetDirs[3].'\\vendor\\symfony\\console\\Command\\Command.php';
 include_once $this->targetDirs[3].'\\vendor\\league\\tactician-bundle\\src\\Command\\DebugCommand.php';
 
-return $this->services['console.command.public_alias.tactician.command.debug'] = new \League\Tactician\Bundle\Command\DebugCommand(array('default' => array('App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\AnuncioCommand' => 'App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\CreateAnuncioHandler')));
+return $this->services['console.command.public_alias.tactician.command.debug'] = new \League\Tactician\Bundle\Command\DebugCommand(array('default' => array('App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\ComponentCommand' => 'App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\CreateComponentHandler')));

@@ -27,7 +27,7 @@ return array(
     '.service_locator.tdKlFgs' => true,
     '.service_locator.tdKlFgs.router.cache_warmer' => true,
     'App\\Domain\\Anuncios\\Domain\\Component\\Components\\ComponentsVO\\ComponentId' => true,
-    'App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\CreateAnuncioHandler' => true,
+    'App\\Domain\\Anuncios\\UseCases\\CreateAnuncio\\CreateComponentHandler' => true,
     'Doctrine\\Common\\Annotations\\Reader' => true,
     'Doctrine\\Common\\Persistence\\ManagerRegistry' => true,
     'Doctrine\\Common\\Persistence\\ObjectManager' => true,

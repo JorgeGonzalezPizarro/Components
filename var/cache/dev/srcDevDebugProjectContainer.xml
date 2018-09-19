@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">C:\wamp64\www\Example\src</parameter>
-    <parameter key="kernel.project_dir">C:\wamp64\www\Example</parameter>
+    <parameter key="kernel.root_dir">C:\wamp64\www\Components\src</parameter>
+    <parameter key="kernel.project_dir">C:\wamp64\www\Components</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">src</parameter>
-    <parameter key="kernel.cache_dir">C:\wamp64\www\Example\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">C:\wamp64\www\Example\var\log</parameter>
+    <parameter key="kernel.cache_dir">C:\wamp64\www\Components\var\cache\dev</parameter>
+    <parameter key="kernel.logs_dir">C:\wamp64\www\Components\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="DoctrineCacheBundle">Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle</parameter>
@@ -22,43 +22,43 @@
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">C:\wamp64\www\Example\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">C:\wamp64\www\Components\vendor\symfony\framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="DoctrineCacheBundle" type="collection">
-        <parameter key="path">C:\wamp64\www\Example\vendor\doctrine\doctrine-cache-bundle</parameter>
+        <parameter key="path">C:\wamp64\www\Components\vendor\doctrine\doctrine-cache-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineCacheBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">C:\wamp64\www\Example\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">C:\wamp64\www\Components\vendor\doctrine\doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">C:\wamp64\www\Example\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="path">C:\wamp64\www\Components\vendor\doctrine\doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="WebServerBundle" type="collection">
-        <parameter key="path">C:\wamp64\www\Example\vendor\symfony\web-server-bundle</parameter>
+        <parameter key="path">C:\wamp64\www\Components\vendor\symfony\web-server-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebServerBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
-        <parameter key="path">C:\wamp64\www\Example\vendor\sensio\framework-extra-bundle</parameter>
+        <parameter key="path">C:\wamp64\www\Components\vendor\sensio\framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="TacticianBundle" type="collection">
-        <parameter key="path">C:\wamp64\www\Example\vendor\league\tactician-bundle\src</parameter>
+        <parameter key="path">C:\wamp64\www\Components\vendor\league\tactician-bundle\src</parameter>
         <parameter key="namespace">League\Tactician\Bundle</parameter>
       </parameter>
       <parameter key="FOSRestBundle" type="collection">
-        <parameter key="path">C:\wamp64\www\Example\vendor\friendsofsymfony\rest-bundle</parameter>
+        <parameter key="path">C:\wamp64\www\Components\vendor\friendsofsymfony\rest-bundle</parameter>
         <parameter key="namespace">FOS\RestBundle</parameter>
       </parameter>
       <parameter key="MyBundle" type="collection">
-        <parameter key="path">C:\wamp64\www\Example\src</parameter>
+        <parameter key="path">C:\wamp64\www\Components\src</parameter>
         <parameter key="namespace">App</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">C:\wamp64\www\Example\vendor\symfony\maker-bundle\src</parameter>
+        <parameter key="path">C:\wamp64\www\Components\vendor\symfony\maker-bundle\src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
     </parameter>
@@ -66,7 +66,7 @@
     <parameter key="kernel.container_class">srcDevDebugProjectContainer</parameter>
     <parameter key="container.autowiring.strict_mode">true</parameter>
     <parameter key="container.dumper.inline_class_loader">true</parameter>
-    <parameter key="env(DATABASE_URL)">DATABASE_URL=mysql://root:@127.0.0.1:3306/example</parameter>
+    <parameter key="env(DATABASE_URL)">DATABASE_URL=mysql://root:@127.0.0.1:3306/components</parameter>
     <parameter key="rabbitmq_host">localhost:15672</parameter>
     <parameter key="rabbitmq_user">guest</parameter>
     <parameter key="rabbitmq_password">guest</parameter>
@@ -85,11 +85,11 @@
       <parameter key="cookie_httponly">true</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">C:\wamp64\www\Example\var\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">C:\wamp64\www\Components\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="data_collector.templates" type="collection"/>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:\wamp64\www\Example\var\cache\dev/srcDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:\wamp64\www\Components\var\cache\dev/srcDevDebugProjectContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -97,7 +97,7 @@
     <parameter key="router.cache_class_prefix">srcDevDebugProjectContainer</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="serializer.mapping.cache.file">C:\wamp64\www\Example\var\cache\dev/serialization.php</parameter>
+    <parameter key="serializer.mapping.cache.file">C:\wamp64\www\Components\var\cache\dev/serialization.php</parameter>
     <parameter key="serializer.mapping.cache.prefix"></parameter>
     <parameter key="doctrine_cache.apc.class">Doctrine\Common\Cache\ApcCache</parameter>
     <parameter key="doctrine_cache.apcu.class">Doctrine\Common\Cache\ApcuCache</parameter>
@@ -155,12 +155,7 @@
       <parameter key="default">doctrine.orm.default_entity_manager</parameter>
     </parameter>
     <parameter key="doctrine.default_entity_manager">default</parameter>
-    <parameter key="doctrine.dbal.connection_factory.types" type="collection">
-      <parameter key="TypeAlto" type="collection">
-        <parameter key="class">App\Domain\Anuncios\Domain\Component\Components\CustomTypes\TypeAlto</parameter>
-        <parameter key="commented">true</parameter>
-      </parameter>
-    </parameter>
+    <parameter key="doctrine.dbal.connection_factory.types" type="collection"/>
     <parameter key="doctrine.connections" type="collection">
       <parameter key="default">doctrine.dbal.default_connection</parameter>
     </parameter>
@@ -211,9 +206,9 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:\wamp64\www\Example\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:\wamp64\www\Components\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
-    <parameter key="doctrine_migrations.dir_name">C:\wamp64\www\Example/src/Migrations</parameter>
+    <parameter key="doctrine_migrations.dir_name">C:\wamp64\www\Components/src/Migrations</parameter>
     <parameter key="doctrine_migrations.namespace">DoctrineMigrations</parameter>
     <parameter key="doctrine_migrations.table_name">migration_versions</parameter>
     <parameter key="doctrine_migrations.name">Application Migrations</parameter>
@@ -243,7 +238,7 @@
         <argument>app:example</argument>
       </call>
     </service>
-    <service id="anuncio.controller" class="App\Controller\AnuncioController" public="true" autowire="true" autoconfigure="true">
+    <service id="Component.controller" class="App\Controller\ComponentController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <argument type="service" id="tactician.commandbus.default"/>
       <argument type="service" id="request_stack"/>
@@ -252,36 +247,26 @@
       <argument type="service" id="tactician.commandbus.default"/>
       <argument type="service" id="request_stack"/>
     </service>
-    <service id="App\Domain\Anuncios\UseCases\CreateAnuncio\CreateAnuncioHandler" class="App\Domain\Anuncios\UseCases\CreateAnuncio\CreateAnuncioHandler" public="false" autowire="true" autoconfigure="true">
-      <tag name="tactician.handler" command="App\Domain\Anuncios\UseCases\Create\AnuncioCommand" typehints="1"/>
-      <argument type="service" id="anuncio_creator"/>
+    <service id="App\Domain\Components\UseCases\CreateComponent\CreateComponentHandler" class="App\Domain\Components\UseCases\CreateComponent\CreateComponentHandler" public="false" autowire="true" autoconfigure="true">
+      <tag name="tactician.handler" command="App\Domain\Components\UseCases\CreateComponent\ComponentCommand" typehints="1"/>
+      <argument type="service" id="Component_creator"/>
     </service>
-    <service id="anuncio_repository" class="App\Domain\Anuncios\Domain\AnuncioDomain\AnuncioRepository" public="false" autowire="true" autoconfigure="true"/>
-    <service id="component_repository" class="App\Domain\Anuncios\Domain\Component\ComponentRepository" public="false" autowire="true" autoconfigure="true"/>
-    <service id="anuncio_repository_doctrine" class="App\Domain\Anuncios\Persistance\AnuncioPersistance" public="false" autowire="true" autoconfigure="true">
+    <service id="component_repository" class="App\Domain\Components\Domain\Component\ComponentRepository" public="false" autowire="true" autoconfigure="true"/>
+    <service id="components_repository_doctrine" class="App\Domain\Components\Persistance\ComponentsPersistance" public="false" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
-      <argument>App\Domain\Anuncios\Domain\AnuncioDomain\Anuncio</argument>
+      <argument>App\Domain\Components\Domain\ComponentDomain\Component</argument>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
     </service>
-    <service id="anuncio_creator" class="App\Domain\Anuncios\UseCases\CreateAnuncio\AnuncioCreator" public="false" autowire="true" autoconfigure="true">
-      <argument type="service" id="anuncio_repository_doctrine"/>
+    <service id="Component_creator" class="App\Domain\Components\UseCases\CreateComponent\ComponentCreator" public="false" autowire="true" autoconfigure="true">
+      <argument type="service" id="components_repository_doctrine"/>
       <argument type="service" id="components_repository_doctrine"/>
       <argument type="service" id="event_domain.publisher"/>
     </service>
-    <service id="App\Domain\Anuncios\Domain\Component\Components\ComponentsVO\ComponentId" class="App\Domain\Anuncios\Domain\Component\Components\ComponentsVO\ComponentId" public="false" autowire="true" autoconfigure="true">
+    <service id="App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentId" class="App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentId" public="false" autowire="true" autoconfigure="true">
       <argument type="service" id="rampsey_id"/>
     </service>
-    <service id="anuncio_id" class="App\Domain\Anuncios\Domain\AnuncioDomain\AnuncioId" public="false" autowire="true" autoconfigure="true">
-      <argument type="service" id="rampsey_id"/>
-    </service>
-    <service id="components_repository_doctrine" class="App\Domain\Anuncios\Persistance\ComponentsPersistance" public="false" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-      <argument>App\Domain\Anuncios\Domain\Component\Component</argument>
-      <argument type="service" id="doctrine.orm.default_entity_manager"/>
-    </service>
-    <service id="event_domain_exception.listener" class="App\Domain\Anuncios\Exception\ExceptionDomainListener" public="false" autowire="true" autoconfigure="true">
+    <service id="event_domain_exception.listener" class="App\Domain\Components\Exception\ExceptionDomainListener" public="false" autowire="true" autoconfigure="true">
       <tag name="tactician.handler" event="kernel.exception" method="onDomainException"/>
     </service>
     <service id="event_domain.publisher" class="App\IO\Events\DomainEventPublisherRabbitMq" public="false" autowire="true" autoconfigure="true"/>
@@ -318,7 +303,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id=".service_locator.FrlPIyZ"/>
+      <argument type="service" id=".service_locator.q601PXj"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -568,9 +553,9 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem" public="true"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>C:\wamp64\www\Example\src/Resources</argument>
+      <argument>C:\wamp64\www\Components\src/Resources</argument>
       <argument type="collection">
-        <argument>C:\wamp64\www\Example\src</argument>
+        <argument>C:\wamp64\www\Components\src</argument>
       </argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner" public="false">
@@ -725,9 +710,9 @@
     </service>
     <service id="cache.app" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="true">
       <tag name="cache.pool"/>
-      <argument>1tPTSzCA1c</argument>
+      <argument>eiyMW9+n2G</argument>
       <argument>0</argument>
-      <argument>C:\wamp64\www\Example\var\cache\dev/pools</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
       </call>
@@ -737,37 +722,37 @@
     </service>
     <service id="cache.system" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="true">
       <tag name="cache.pool"/>
-      <argument>RRQzbooj8t</argument>
+      <argument>Uh+fES8SEl</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\wamp64\www\Example\var\cache\dev/pools</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
-      <argument>tC8M2OAhLB</argument>
+      <argument>7hgSsbsqYs</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\wamp64\www\Example\var\cache\dev/pools</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
-      <argument>ujUIfC7L2V</argument>
+      <argument>1P3x1ZI7H+</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\wamp64\www\Example\var\cache\dev/pools</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
-      <argument>A9qliXqgPR</argument>
+      <argument>rtCgwB-20D</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\wamp64\www\Example\var\cache\dev/pools</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -777,7 +762,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\wamp64\www\Example\var\cache\dev/pools</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -806,7 +791,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:\wamp64\www\Example\var\cache\dev/pools</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
       </call>
@@ -871,15 +856,15 @@
         <argument key="cache.annotations" type="service" id="cache.annotations" on-invalid="ignore_uninitialized"/>
       </argument>
     </service>
-    <service id=".2_ServiceLocator~pdOqsN4" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".2_ServiceLocator~4xEPB_A" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="initialized_session" type="service" id="session" on-invalid="ignore_uninitialized"/>
         <argument key="session" type="service" id="session" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".1_NativeFileSessionHandler~pdOqsN4" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>C:\wamp64\www\Example\var\cache\dev/sessions</argument>
+    <service id=".1_NativeFileSessionHandler~4xEPB_A" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>C:\wamp64\www\Components\var\cache\dev/sessions</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -902,19 +887,19 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>C:\wamp64\www\Example\var\cache\dev/sessions</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler" public="false">
-      <argument type="service" id=".1_NativeFileSessionHandler~pdOqsN4"/>
+      <argument type="service" id=".1_NativeFileSessionHandler~4xEPB_A"/>
     </service>
     <service id="session_listener" class="Symfony\Component\HttpKernel\EventListener\SessionListener" public="false">
       <tag name="kernel.event_subscriber"/>
       <tag name="container.hot_path"/>
       <tag name="container.hot_path"/>
       <tag name="container.hot_path"/>
-      <argument type="service" id=".2_ServiceLocator~pdOqsN4"/>
+      <argument type="service" id=".2_ServiceLocator~4xEPB_A"/>
     </service>
     <service id="session.save_listener" class="Symfony\Component\HttpKernel\EventListener\SaveSessionListener" public="false">
       <deprecated>The "%service_id%" service is deprecated since Symfony 4.1. Use the "session_listener" service instead.</deprecated>
@@ -1023,7 +1008,7 @@
       <argument type="service" id=".service_locator.oNnsU_h.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\wamp64\www\Example\var\cache\dev</argument>
+        <argument key="cache_dir">C:\wamp64\www\Components\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -1065,7 +1050,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>C:\wamp64\www\Example</argument>
+      <argument>C:\wamp64\www\Components</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -1091,12 +1076,12 @@
       <argument type="service" id="file_locator"/>
       <argument type="service" id="routing.loader.annotation"/>
     </service>
-    <service id=".2_PhpArrayAdapter~Pk0aq9k" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>C:\wamp64\www\Example\var\cache\dev/annotations.php</argument>
+    <service id=".2_PhpArrayAdapter~QcbJ4CJ" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>C:\wamp64\www\Components\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id=".1_ArrayCache~Pk0aq9k" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+    <service id=".1_ArrayCache~QcbJ4CJ" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
@@ -1111,7 +1096,7 @@
     <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
       <tag name="annotations.cached_reader"/>
       <argument type="service" id="annotations.reader"/>
-      <argument type="service" id=".1_ArrayCache~Pk0aq9k"/>
+      <argument type="service" id=".1_ArrayCache~QcbJ4CJ"/>
       <argument>true</argument>
       <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
@@ -1121,13 +1106,13 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>C:\wamp64\www\Example\var\cache\dev/annotations.php</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!AbstractController$|Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id=".2_PhpArrayAdapter~Pk0aq9k"/>
+      <argument type="service" id=".2_PhpArrayAdapter~QcbJ4CJ"/>
     </service>
     <service id="serializer" class="Symfony\Component\Serializer\Serializer" public="true">
       <argument type="collection">
@@ -1189,11 +1174,11 @@
           </service>
         </argument>
       </argument>
-      <argument>C:\wamp64\www\Example\var\cache\dev/serialization.php</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>C:\wamp64\www\Example\var\cache\dev/serialization.php</argument>
+      <argument>C:\wamp64\www\Components\var\cache\dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1312,7 +1297,7 @@
       </call>
     </service>
     <service id="doctrine.dbal.connection_factory" class="Doctrine\Bundle\DoctrineBundle\ConnectionFactory">
-      <argument>%doctrine.dbal.connection_factory.types%</argument>
+      <argument type="collection"/>
     </service>
     <service id="doctrine.dbal.connection" class="Doctrine\DBAL\Connection" abstract="true">
       <factory service="doctrine.dbal.connection_factory" method="createConnection"/>
@@ -1416,7 +1401,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.T76XN_V"/>
+      <argument type="service" id=".service_locator.BQqwjxh"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -1537,10 +1522,9 @@
     <service id="doctrine.orm.default_configuration" class="Doctrine\ORM\Configuration" public="false">
       <call method="setEntityNamespaces">
         <argument type="collection">
-          <argument key="MyBundle">App\Domain\Anuncios\Domain\AnuncioDomain</argument>
-          <argument key="Components">App\Domain\Anuncios\Domain\Component\Components</argument>
-          <argument key="Component">App\Domain\Anuncios\Domain\Component</argument>
-          <argument key="Embebed">App\Domain\Anuncios\Domain\Component\Components\ComponentsVO</argument>
+          <argument key="Components">App\Domain\Components\Domain\Component\Components</argument>
+          <argument key="Component">App\Domain\Components\Domain\Component</argument>
+          <argument key="Embebed">App\Domain\Components\Domain\Component\Components\ComponentsVO</argument>
         </argument>
       </call>
       <call method="setMetadataCacheImpl">
@@ -1556,7 +1540,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:\wamp64\www\Example\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>C:\wamp64\www\Components\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -1585,10 +1569,9 @@
     </service>
     <service id="doctrine.orm.default_yml_metadata_driver" class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
       <argument type="collection">
-        <argument key="C:\wamp64\www\Example\src\Domain\Anuncios\Domain\AnuncioDomain">App\Domain\Anuncios\Domain\AnuncioDomain</argument>
-        <argument key="C:\wamp64\www\Example\src\Domain\Anuncios\Domain\Component\Components">App\Domain\Anuncios\Domain\Component\Components</argument>
-        <argument key="C:\wamp64\www\Example\src\Domain\Anuncios\Domain\Component">App\Domain\Anuncios\Domain\Component</argument>
-        <argument key="C:\wamp64\www\Example\src\Domain\Anuncios\Domain\Component\Components\ComponentsVO">App\Domain\Anuncios\Domain\Component\Components\ComponentsVO</argument>
+        <argument key="C:\wamp64\www\Components\src\Domain\Components\Domain\Component\Components">App\Domain\Components\Domain\Component\Components</argument>
+        <argument key="C:\wamp64\www\Components\src\Domain\Components\Domain\Component">App\Domain\Components\Domain\Component</argument>
+        <argument key="C:\wamp64\www\Components\src\Domain\Components\Domain\Component\Components\ComponentsVO">App\Domain\Components\Domain\Component\Components\ComponentsVO</argument>
       </argument>
       <call method="setGlobalBasename">
         <argument>mapping</argument>
@@ -1597,34 +1580,30 @@
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_yml_metadata_driver"/>
-        <argument>App\Domain\Anuncios\Domain\AnuncioDomain</argument>
+        <argument>App\Domain\Components\Domain\Component\Components</argument>
       </call>
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_yml_metadata_driver"/>
-        <argument>App\Domain\Anuncios\Domain\Component\Components</argument>
+        <argument>App\Domain\Components\Domain\Component</argument>
       </call>
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_yml_metadata_driver"/>
-        <argument>App\Domain\Anuncios\Domain\Component</argument>
-      </call>
-      <call method="addDriver">
-        <argument type="service" id="doctrine.orm.default_yml_metadata_driver"/>
-        <argument>App\Domain\Anuncios\Domain\Component\Components\ComponentsVO</argument>
+        <argument>App\Domain\Components\Domain\Component\Components\ComponentsVO</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_6ac7840df5baa70b836f606607eced1430526e851828967c8fb6b06cbf7b0f2a</argument>
+        <argument>sf_orm_default_74079d20d6e61b41476899e0098430a0a09f424ada9e058f8d468e53e443d408</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_6ac7840df5baa70b836f606607eced1430526e851828967c8fb6b06cbf7b0f2a</argument>
+        <argument>sf_orm_default_74079d20d6e61b41476899e0098430a0a09f424ada9e058f8d468e53e443d408</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_6ac7840df5baa70b836f606607eced1430526e851828967c8fb6b06cbf7b0f2a</argument>
+        <argument>sf_orm_default_74079d20d6e61b41476899e0098430a0a09f424ada9e058f8d468e53e443d408</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\Bundle\DoctrineBundle\Mapping\ContainerAwareEntityListenerResolver">
@@ -1666,7 +1645,7 @@
     </service>
     <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
       <tag name="console.command" command="server:run"/>
-      <argument>C:\wamp64\www\Example/public</argument>
+      <argument>C:\wamp64\www\Components/public</argument>
       <argument>dev</argument>
       <call method="setName">
         <argument>server:run</argument>
@@ -1674,7 +1653,7 @@
     </service>
     <service id="web_server.command.server_start" class="Symfony\Bundle\WebServerBundle\Command\ServerStartCommand" public="false">
       <tag name="console.command" command="server:start"/>
-      <argument>C:\wamp64\www\Example/public</argument>
+      <argument>C:\wamp64\www\Components/public</argument>
       <argument>dev</argument>
       <call method="setName">
         <argument>server:start</argument>
@@ -1752,7 +1731,7 @@
       <tag name="console.command"/>
       <argument type="collection">
         <argument key="default" type="collection">
-          <argument key="App\Domain\Anuncios\UseCases\CreateAnuncio\AnuncioCommand">App\Domain\Anuncios\UseCases\CreateAnuncio\CreateAnuncioHandler</argument>
+          <argument key="App\Domain\Components\UseCases\CreateComponent\ComponentCommand">App\Domain\Components\UseCases\CreateComponent\CreateComponentHandler</argument>
         </argument>
       </argument>
     </service>
@@ -1893,7 +1872,7 @@
     <service id="maker.file_manager" class="Symfony\Bundle\MakerBundle\FileManager" public="false">
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
-      <argument>C:\wamp64\www\Example</argument>
+      <argument>C:\wamp64\www\Components</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder" public="false"/>
     <service id="maker.autoloader_util" class="Symfony\Bundle\MakerBundle\Util\AutoloaderUtil" public="false">
@@ -1941,7 +1920,7 @@
       <tag name="maker.command"/>
       <argument type="service" id="maker.file_manager"/>
       <argument type="service" id="maker.doctrine_helper"/>
-      <argument>C:\wamp64\www\Example</argument>
+      <argument>C:\wamp64\www\Components</argument>
       <argument type="service" id="maker.generator"/>
     </service>
     <service id="maker.maker.make_fixtures" class="Symfony\Bundle\MakerBundle\Maker\MakeFixtures" public="false">
@@ -1981,14 +1960,12 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration" public="false">
       <tag name="maker.command"/>
-      <argument>C:\wamp64\www\Example</argument>
+      <argument>C:\wamp64\www\Components</argument>
     </service>
     <service id=".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\ExampleCommand" class="App\Command\ExampleCommand" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Command\ExampleCommand" class="App\Command\ExampleCommand" public="false" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.anuncio_repository_doctrine" class="App\Domain\Anuncios\Persistance\AnuncioPersistance" public="false" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.anuncio_repository_doctrine" class="App\Domain\Anuncios\Persistance\AnuncioPersistance" public="false" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.components_repository_doctrine" class="App\Domain\Anuncios\Persistance\ComponentsPersistance" public="false" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.components_repository_doctrine" class="App\Domain\Anuncios\Persistance\ComponentsPersistance" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.components_repository_doctrine" class="App\Domain\Components\Persistance\ComponentsPersistance" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.components_repository_doctrine" class="App\Domain\Components\Persistance\ComponentsPersistance" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="maker.auto_command.make_auth" class="Symfony\Bundle\MakerBundle\Command\MakerCommand" public="false">
       <tag name="console.command" command="make:auth"/>
       <argument type="service" id="maker.maker.make_authenticator"/>
@@ -2145,13 +2122,13 @@
         <argument key="application" type="service" id=".errored..service_locator.bxfMTph.Symfony\Component\Console\Application"/>
       </argument>
     </service>
-    <service id=".service_locator.FrlPIyZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.q601PXj" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="anuncio.controller::build" type="service" id=".service_locator..7uNotq"/>
-        <argument key="anuncio.controller::registerCommands" type="service" id=".service_locator.bxfMTph"/>
-        <argument key="anuncio.controller:build" type="service" id=".service_locator..7uNotq"/>
-        <argument key="anuncio.controller:registerCommands" type="service" id=".service_locator.bxfMTph"/>
+        <argument key="Component.controller::build" type="service" id=".service_locator..7uNotq"/>
+        <argument key="Component.controller::registerCommands" type="service" id=".service_locator.bxfMTph"/>
+        <argument key="Component.controller:build" type="service" id=".service_locator..7uNotq"/>
+        <argument key="Component.controller:registerCommands" type="service" id=".service_locator.bxfMTph"/>
       </argument>
     </service>
     <service id=".service_locator.gmwRZ3h" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -2177,23 +2154,22 @@
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
-    <service id=".service_locator.T76XN_V" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.BQqwjxh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="anuncio_repository_doctrine" type="service" id="anuncio_repository_doctrine"/>
         <argument key="components_repository_doctrine" type="service" id="components_repository_doctrine"/>
       </argument>
     </service>
     <service id="tactician.commandbus.default.handler.service_locator" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Domain\Anuncios\UseCases\CreateAnuncio\CreateAnuncioHandler" type="service" id="App\Domain\Anuncios\UseCases\CreateAnuncio\CreateAnuncioHandler"/>
+        <argument key="App\Domain\Components\UseCases\CreateComponent\CreateComponentHandler" type="service" id="App\Domain\Components\UseCases\CreateComponent\CreateComponentHandler"/>
       </argument>
     </service>
     <service id="tactician.commandbus.default.handler.locator" class="League\Tactician\Container\ContainerLocator">
       <argument type="service" id="tactician.commandbus.default.handler.service_locator"/>
       <argument type="collection">
-        <argument key="App\Domain\Anuncios\UseCases\CreateAnuncio\AnuncioCommand">App\Domain\Anuncios\UseCases\CreateAnuncio\CreateAnuncioHandler</argument>
+        <argument key="App\Domain\Components\UseCases\CreateComponent\ComponentCommand">App\Domain\Components\UseCases\CreateComponent\CreateComponentHandler</argument>
       </argument>
     </service>
     <service id="tactician.commandbus.default.middleware.command_handler" class="League\Tactician\Handler\CommandHandlerMiddleware">
@@ -2426,16 +2402,16 @@
     <service id="fos_rest.router" alias="router.default"/>
     <service id="fos_rest.view_handler" alias="fos_rest.view_handler.default" public="true"/>
     <service id="fos_rest.inflector" alias="fos_rest.inflector.doctrine"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.FrlPIyZ"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.q601PXj"/>
     <service id="tactician.commandbus" alias="tactician.commandbus.default"/>
     <service id="League\Tactician\CommandBus" alias="tactician.commandbus.default"/>
     <service id="tactician.handler.locator.symfony" alias="tactician.commandbus.default.handler.locator"/>
     <service id="tactician.middleware.command_handler" alias="tactician.commandbus.default.middleware.command_handler"/>
     <service id="fos_rest.serializer" alias="fos_rest.serializer.symfony"/>
     <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>
-    <service id=".service_locator.AoifO_3" alias=".2_ServiceLocator~pdOqsN4" public="false"/>
+    <service id=".service_locator.AoifO_3" alias=".2_ServiceLocator~4xEPB_A" public="false"/>
     <service id=".service_locator.YUq96kP" alias="messenger.sender_locator" public="false"/>
-    <service id=".service_locator.pJNLORz" alias="tactician.commandbus.default.handler.service_locator" public="false"/>
+    <service id=".service_locator.7qoEMJ7" alias="tactician.commandbus.default.handler.service_locator" public="false"/>
     <service id="messenger.bus.default" alias="debug.traced.messenger.bus.default"/>
     <service id="console.command.public_alias.doctrine_cache.contains_command" alias="doctrine_cache.contains_command" public="true"/>
     <service id="console.command.public_alias.doctrine_cache.delete_command" alias="doctrine_cache.delete_command" public="true"/>

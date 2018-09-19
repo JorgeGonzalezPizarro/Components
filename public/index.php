@@ -31,7 +31,7 @@ if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? false) {
 if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? false) {
     Request::setTrustedHosts(explode(',', $trustedHosts));
 }
-//Type::addType('TypeAlto', 'App\Domain\Anuncios\Domain\Component\Components\ComponentsVO\TypeAlto');
+//Type::addType('TypeAlto', 'App\Domain\Components\Domain\Component\Components\ComponentsVO\TypeAlto');
 
 $kernel = new Kernel($env, $debug);
 $request = Request::createFromGlobals();
