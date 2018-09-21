@@ -41,4 +41,5 @@ return [
     FOS\RestBundle\FOSRestBundle::class => ['all' => true],
     App\MyBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
+    OldSound\RabbitMqBundle\OldSoundRabbitMqBundle::class => ['all' => true]
 ];

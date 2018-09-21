@@ -10,7 +10,7 @@
 
 namespace App\IO\Events;
 
-use App\Domain\Anuncios\Domain\EventPublisher;
+use App\Domain\Components\Domain\EventPublisher;
 use JMS\Serializer\SerializerBuilder;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;

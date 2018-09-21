@@ -10,9 +10,9 @@
 namespace App\Domain\Components\UseCases\CreateComponent;
 
 
-use App\Domain\Anuncios\Domain\Component\ComponentRepository;
+use App\Domain\Components\Domain\Component\ComponenteValidator;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentId;
 use App\IO\Events\EventPublisher;
-use App\Domain\Anuncios\Domain\IState;
 use Doctrine\Common\Collections\ArrayCollection;
 
 class ComponentCreator
@@ -28,24 +28,20 @@ class ComponentCreator
     }
 
     public function __invoke(
-        AnuncioId $id,
-        $anuncioState,
-        ArrayCollection $components)
+        ComponentId $id,
+        $anuncioId,
+        array $components)
     {
-        $anuncio = Anuncio::createAnuncio(
-            $id,
-            $anuncioState,
+        
+        $component = ComponenteValidator::typeComponent(
+            $anuncioId,$id,
             $components
         );
-        $this->anuncioRepository->store($anuncio);
-        $this->eventPublisher->publish($anuncio->getDomainEvents());
+        $this->componentsRepository->store($component);
+        //$this->anuncioRepository->store($anuncio);
+        //$this->eventPublisher->publish($anuncio->getDomainEvents());
 
-        //$components = $anuncio->getAssocietComponents();
-        //foreach ($components as $component) {
-         //   $this->componentsRepository->store($component);
-       // }
         
-       // $this->componentsRepository->finishStoreAnuncio();
 
 
     }

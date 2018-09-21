@@ -9,7 +9,12 @@
 namespace App\Domain\Components\Domain\Component\Components;
 
 
-use App\Domain\Anuncios\Domain\Component\Component;
+use App\Domain\Components\Domain\Component\Component;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentAlto;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentAncho;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentId;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentNombre;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentPosition;
 
 class ComponentVideo extends \App\Domain\Components\Domain\Component\Component
 {
@@ -25,7 +30,7 @@ class ComponentVideo extends \App\Domain\Components\Domain\Component\Component
     {
         $this->anuncioId=$anuncioId;
         $this->componentId= new ComponentId(new UUid());
-        $this->position=new ComponentPosicion($position);
+        $this->position=new ComponentPosition($position);
         $this->ancho=new ComponentAncho($ancho);
         $this->alto=new ComponentAlto($alto);
         $this->nombre = new ComponentNombre($nombre);

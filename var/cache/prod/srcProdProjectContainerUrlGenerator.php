@@ -20,7 +20,7 @@ class srcProdProjectContainerUrlGenerator extends Symfony\Component\Routing\Gene
         $this->defaultLocale = $defaultLocale;
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
-        'blog_list' => array(array(), array('_controller' => 'anuncio.controller'), array(), array(array('text', '/')), array(), array()),
+        'blog_list' => array(array(), array('_controller' => 'component.controller'), array(), array(array('text', '/')), array(), array()),
     );
         }
     }

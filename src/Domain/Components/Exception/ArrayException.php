@@ -9,14 +9,10 @@
     namespace App\Domain\Components\Exception;
     
     
-    use App\Domain\Anuncios\Domain\AnuncioDomain\ComponentAlto;
-    use App\Domain\Anuncios\Domain\AnuncioDomain\ComponentAncho;
-    use App\Domain\Anuncios\Domain\AnuncioDomain\ComponentNombre;
-    use App\Domain\Anuncios\Domain\AnuncioDomain\ComponentPosicion;
-    use App\Domain\Anuncios\Domain\Component\Component;
-    use App\Domain\Anuncios\Domain\Component\Components\FileComponentVO\TextFile;
-    use App\Domain\Anuncios\Exception\DomainException;
+
+    use App\Domain\Components\Domain\Component\Component;
     use Doctrine\Common\Collections\ArrayCollection;
+    use DomainException;
 
     class ArrayException extends ArrayCollection
     {
@@ -29,7 +25,7 @@
      
     public static function addException($exception ){
          
-         if($exception instanceof DomainException){
+         if($exception instanceof MyException){
          return  parent::add($exception);
          }
          return;

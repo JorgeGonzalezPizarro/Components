@@ -7,9 +7,6 @@
  */
     namespace api\controller;
 
-use App\Domain\Anuncios\UseCases\CreateAnuncio\ComponentCreator;
-use App\Domain\Anuncios\UseCases\CreateAnuncio\CreateComponentHandler;
-use App\Domain\Anuncios\UseCases\CreateAnuncio\AuncioCreateCommand;
 use Symfony\Component\HttpFoundation\Request;
 
 

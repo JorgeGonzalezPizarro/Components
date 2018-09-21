@@ -110,6 +110,9 @@
     "league/tactician-logger": {
         "version": "v0.10.0"
     },
+    "moontoast/math": {
+        "version": "1.1.2"
+    },
     "nikic/php-parser": {
         "version": "v4.0.3"
     },
@@ -160,6 +163,9 @@
             "version": "5.2",
             "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
         }
+    },
+    "supervisorphp/supervisor": {
+        "version": "v3.0.0"
     },
     "symfony/cache": {
         "version": "v4.1.4"

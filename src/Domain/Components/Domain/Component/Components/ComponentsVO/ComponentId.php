@@ -9,8 +9,6 @@
     namespace App\Domain\Components\Domain\Component\Components\ComponentsVO;
     
     
-    use App\Domain\Anuncios\Domain\AnuncioDomain\AnuncioId;
-    use App\Domain\Anuncios\Domain\AnuncioDomain\Uuid;
 
     class ComponentId
     {

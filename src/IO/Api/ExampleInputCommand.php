@@ -9,7 +9,6 @@
     namespace App\IO\Api;
     
     
-    use App\Domain\Anuncios\Domain\EventSubscriber;
     use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
     use Symfony\Component\Console\Command\Command;
 

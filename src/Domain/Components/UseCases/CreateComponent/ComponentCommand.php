@@ -9,19 +9,22 @@
 
 namespace App\Domain\Components\UseCases\CreateComponent;
 
+use App\Domain\Components\Domain\Component\Components\ArrayComponents;
 use Symfony\Component\HttpFoundation\ParameterBag;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Serializer\Encoder\JsonEncode;
 
 class ComponentCommand
 {
     private $anuncioComponents;
-    private $anuncioState;
+    private $anuncioId;
 
 
-    public function __construct(\Symfony\Component\HttpFoundation\Request $request)
+    public function __construct(array $arrayComponents , ?string $anuncioId =NULL)
     {
-        $this->request = $request;
-        $this->anuncioComponents = $request->get('components');
-        $this->anuncioState = $request->get('state');
+        $this->anuncioComponents = $arrayComponents;
+        $this->idAnuncio = $anuncioId;
+        
     }
 
     /**
@@ -31,23 +34,14 @@ class ComponentCommand
     {
         return $this->anuncioComponents;
     }
+    
 
-    public function getAnuncioState()
+
+    public function getAnuncioId()
     {
-        return $this->anuncioState;
+        return $this->idAnuncio;
     }
 
-
-
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    public function getRequest(): Request
-    {
-        return $this->request;
-    }
 
 
 }

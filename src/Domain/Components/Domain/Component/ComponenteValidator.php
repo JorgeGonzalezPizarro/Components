@@ -7,11 +7,10 @@
  */
 
 
-namespace App\Domain\Component\Domain\Component;
+namespace App\Domain\Components\Domain\Component;
 
-use App\Domain\Anuncios\Exception\ExceptionDomain;
-use App\Domain\Anuncios\Exception\ExceptionDomainPublisher;
-use App\Domain\Anuncios\Exception\ImplementDomainException;
+
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentId;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\Finder\Finder;
 use Throwable;
@@ -26,12 +25,12 @@ class ComponenteValidator
     }
     
 
-    public static function typeComponent($anuncioId,$component)
+    public static function typeComponent($anuncioId,ComponentId $componentId,$component)
     {
         $type = $component['type'];
         $path = "Component";
         $class = $path . $type;
-            return Component::createComponent($anuncioId,$class, $component);
+            return Component::createComponent($anuncioId,$componentId,$class, $component);
         
             
             

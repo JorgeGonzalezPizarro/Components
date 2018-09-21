@@ -9,10 +9,13 @@
     namespace App\Domain\Components\Exception;
     
     
+    use DomainException;
     use Exception;
+    use Symfony\Component\Debug\BufferingLogger;
+    use Symfony\Component\Debug\ErrorHandler;
     use Throwable;
 
-    class ImplementDomainException extends Exception implements DomainExceptionInterface
+    class ImplementDomainException extends \Exception implements DomainExceptionInterface
     {
      
         
@@ -44,4 +47,8 @@
         {
             return parent::getCode();
         }
+    
+    
+    
+    
     }

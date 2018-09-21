@@ -9,12 +9,8 @@
     namespace App\Domain\Components\Domain\Component\Components;
     
     
-    use App\Domain\Anuncios\Domain\AnuncioDomain\ComponentAlto;
-    use App\Domain\Anuncios\Domain\AnuncioDomain\ComponentAncho;
-    use App\Domain\Anuncios\Domain\AnuncioDomain\ComponentNombre;
-    use App\Domain\Anuncios\Domain\AnuncioDomain\ComponentPosicion;
-    use App\Domain\Anuncios\Domain\Component\Component;
-    use App\Domain\Anuncios\Domain\Component\Components\FileComponentVO\TextFile;
+
+    use App\Domain\Components\Domain\Component\Component;
     use Doctrine\Common\Collections\ArrayCollection;
 
     class ArrayComponents extends ArrayCollection

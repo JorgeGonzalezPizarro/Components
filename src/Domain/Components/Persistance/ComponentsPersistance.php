@@ -8,11 +8,8 @@
     
     namespace App\Domain\Components\Persistance;
     
-    
-    use App\Domain\Anuncios\Domain\AnuncioDomain\Anuncio;
-    use App\Domain\Anuncios\Domain\AnuncioDomain\AnuncioRepository;
-    use App\Domain\Anuncios\Domain\AnuncioDomain\ComponentRepository;
-    use App\Domain\Anuncios\Domain\Component\Component;
+
+    use App\Domain\Components\Domain\Component\Component;
     use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
     use Doctrine\Common\Persistence\ManagerRegistry;
     use Doctrine\ORM\EntityManager;
@@ -37,6 +34,8 @@
         public function store($component)
         {
             $this->getEntityManager()->persist($component);
+            $this->getEntityManager()->flush($component);
+    
         }
     
         public function finishStoreAnuncio()

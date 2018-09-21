@@ -10,6 +10,7 @@ namespace App\Domain\Components\UseCases\CreateComponent;
 
 
 
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentId;
 use App\Domain\Components\Domain\Component\Uuid;
 use App\Domain\Components\Domain\Component\ComponenteValidator;
 use App\Domain\Components\Domain\Component\Components\ArrayComponents;
@@ -19,29 +20,31 @@ class CreateComponentHandler
 
     private $anuncioCreator;
 
-    public function __construct(ComponentCreator $anuncioCreator)
+    public function __construct(ComponentCreator $componentCreator)
 
     {
-        $this->anuncioCreator = $anuncioCreator;
+        $this->componentCreator = $componentCreator;
     }
 
-    public function handle(ComponentCommand $anuncioCommand)
+    public function handle(ComponentCommand $componentCommand)
     {
         
         $componentsList = new ArrayComponents();
-        $anuncioId= new AnuncioId();
-        foreach($anuncioCommand->getAnuncioComponents() as $component){
+        $anuncioId=$componentCommand->getAnuncioId();
+        foreach($componentCommand->getAnuncioComponents() as $component){
             $componentsList->add($component);
         }
         
         
         
-        $state = StateValidator::fromRequest($anuncioCommand->getAnuncioState());
-        $this->anuncioCreator->__invoke(
-            $anuncioId,
-            $state,
-            $componentsList);
-
+        foreach($componentsList as $component) {
+            $this->componentCreator->__invoke(
+                new ComponentId(),
+                $anuncioId,
+                $component
+                );
+        
+        }
 
     }
 

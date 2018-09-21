@@ -24,10 +24,9 @@ abstract class Component
 
 
     
-    public static function createComponent($anuncioId,$componentType, $componentObject)
+    public static function createComponent($anuncioId,ComponentId $componentId,$componentType, $componentObject)
     {
         $component = __NAMESPACE__ . '\Components\\' . $componentType;
-        $componentId=new ComponentId();
         $componentObject['id']=$componentId;
           return $component::constructComponent($anuncioId,$componentObject);
     }

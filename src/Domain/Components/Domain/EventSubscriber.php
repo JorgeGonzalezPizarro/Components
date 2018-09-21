@@ -12,7 +12,6 @@ namespace App\Domain\Components\Domain;
 interface EventSubscriber
 {
 
-    public static function connect();
     
     public function getEvents();
     

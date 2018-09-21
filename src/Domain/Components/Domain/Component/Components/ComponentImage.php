@@ -9,12 +9,18 @@
 namespace App\Domain\Components\Domain\Component\Components;
 
 
-use App\Domain\Anuncios\Domain\Component\Component;
-use App\Domain\Anuncios\Exception\ImplementDomainException;
+use App\Domain\Components\Domain\Component\Component;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentAlto;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentAncho;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentId;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentNombre;
+use App\Domain\Components\Domain\Component\Components\ComponentsVO\ComponentPosition;
+use App\Domain\Components\Exception\ImplementDomainException;
+use App\Domain\Components\Exception\MyException;
 use Doctrine\ORM\Mapping as ORM;
 use DomainException;
 use Exception;
-use App\Domain\Anuncios\Exception\ArrayException;
+use App\Domain\Components\Exception\ArrayException;
 use function json_encode;
 
 /**
@@ -35,7 +41,7 @@ class ComponentImage extends \App\Domain\Components\Domain\Component\Component
     {
         $this->anuncioId=$anuncioId;
         $this->componentId= new ComponentId(new UUid());
-        $this->position=new ComponentPosicion($position);
+        $this->position=new ComponentPosition($position);
         $this->ancho=new ComponentAncho($ancho);
         $this->alto=new ComponentAlto($alto);
         $this->nombre = new ComponentNombre($nombre);
@@ -55,14 +61,13 @@ class ComponentImage extends \App\Domain\Components\Domain\Component\Component
                 $componentObject['alto'],
                 $componentObject['position'],
                 $componentObject['name']);;
+        } catch (Exception $domainException) {
+            throw new MyException($domainException);
+    
         }
-        catch (Exception $domainException) {
-
-            ArrayException::addException($domainException);
-            throw new ImplementDomainException(self::class);
 
         }
-    }
+    
     
     public function getComponentId()
     {

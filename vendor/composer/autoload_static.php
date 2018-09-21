@@ -42,6 +42,7 @@ class ComposerStaticInit61dbbd448a6732768ae4678171600503
             'Symfony\\Bundle\\MakerBundle\\' => 27,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
             'Symfony\\Bridge\\Doctrine\\' => 24,
+            'Supervisor\\' => 11,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
         ),
         'R' => 
@@ -65,6 +66,10 @@ class ComposerStaticInit61dbbd448a6732768ae4678171600503
         'N' => 
         array (
             'Negotiation\\' => 12,
+        ),
+        'M' => 
+        array (
+            'Moontoast\\Math\\' => 15,
         ),
         'L' => 
         array (
@@ -211,6 +216,10 @@ class ComposerStaticInit61dbbd448a6732768ae4678171600503
         array (
             0 => __DIR__ . '/..' . '/symfony/doctrine-bridge',
         ),
+        'Supervisor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/supervisorphp/supervisor/src',
+        ),
         'Sensio\\Bundle\\FrameworkExtraBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle',
@@ -254,6 +263,10 @@ class ComposerStaticInit61dbbd448a6732768ae4678171600503
         'Negotiation\\' => 
         array (
             0 => __DIR__ . '/..' . '/willdurand/negotiation/src/Negotiation',
+        ),
+        'Moontoast\\Math\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/moontoast/math/src/Moontoast/Math',
         ),
         'League\\Tactician\\Logger\\' => 
         array (
